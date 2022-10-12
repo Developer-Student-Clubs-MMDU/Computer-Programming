@@ -1,0 +1,21 @@
+static memory allocation-->
+When the allocation of memory performs at the compile time, then it is known as static memory.
+The memory is allocated at the compile time.
+In static memory allocation, while executing a program, the memory cannot be changed.
+Static memory allocation is preferred in an array.
+It saves running time as it is fast.
+Static memory allocation allots memory from the stack.
+Static memory allocation is less efficient as compared to Dynamic memory allocation.
+This memory allocation is simple.
+
+dynamic memory allocation-->
+When the memory allocation is done at the execution or run time, then it is called dynamic memory allocation.
+The memory is allocated at the runtime.
+In dynamic memory allocation, while executing a program, the memory can be changed.
+Dynamic memory allocation is preferred in the linked list.
+It is slower than static memory allocation.
+Dynamic memory allocation allots memory from the heap.
+Dynamic memory allocation is more efficient as compared to the Static memory allocation.
+This memory allocation is complicated.
+
+
