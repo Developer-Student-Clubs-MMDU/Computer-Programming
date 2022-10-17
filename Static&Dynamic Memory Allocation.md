@@ -36,7 +36,7 @@ int main()
     scanf("%d", &size);
     char str[size];
     printf("Enter some text: \n");
-    scanf(" ");
+    fflush(stdin);
     gets(str);
     printf("Inputted text is: %s\n", str);
     return 0;
