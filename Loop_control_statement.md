@@ -13,18 +13,24 @@ The syntax of the continue statement is as follows:
 continue [label];
 
 In this task, I have a list of numbers, stored in an array. I only want to print out the numbers that are divisible by 5. I’m going to skip the rest of them. I am going to achieve this with the help of a continue statement. Be sure you run the code with me so you understand the concept clearly.
-Code:
 
+`Code:`
 ```javascript
-      var numbers = [65, 99, 34, 12, 10, 77]; //array of numbers
-      for(number of numbers){ //iterating through the values of numbers
-        if(number % 5 == 0){ //chhecking if the number is divisible by 5
-          document.write(number + " is divisible by 5.</br>")
-        }else{
-          continue; //restarts the loop
-          document.write(number + " is not divisible by 5.</br>") //skipped statement
-        }
-      }
+var numbers = [65, 99, 34, 12, 10, 77]; //array of numbers
+for (number of numbers) { //iterating through the values of numbers
+    if (number % 5 == 0) { //chhecking if the number is divisible by 5
+        console.log(number + " is divisible by 5.")
+    } else {
+        continue; //restarts the loop
+        console.log(number + " is not divisible by 5.") //skipped statement
+    }
+}
+```
+
+`Output:`
+```
+65 is divisible by 5.
+10 is divisible by 5.
 ```
 
 ### 2. break Statement
@@ -33,16 +39,26 @@ These are used to terminate a loop immediately, even if the condition is not yet
 break [label];
 
 This time, I started a loop for printing numbers in descending order from 10 to 0. But I decided that I don’t actually want it to continue its execution after I print the number 5. You and I are going to do this with the help of a break statement in our code.
-Code:
 
+`Code:`
 ```javascript
-for (var num = 10; num >=0 ; num--){ //loop to print 10 to 0
-        if (num == 4){
-          break; //break out of the loop 
-        }else{
-          document.write(num + "</br>");
-        }
-      }
+for (var num = 10; num >= 0; num--) { //loop to print 10 to 0
+    if (num == 4) {
+        break; //break out of the loop 
+    } else {
+        console.log(num);
+    }
+}
+```
+
+`Output:`
+```
+10
+9
+8
+7
+6
+5
 ```
 
 ### 3. labeled Statement
@@ -55,18 +71,24 @@ labelName:
 
   Let’s understand this statement with a real-life example. Suppose I have to calculate the number of weekdays this month. In this case, the month is starting with a Sunday; the total days in this month are 31. I will do this with the help of a labeled statement and a continue statement.
 label with continue:
-Code:
+
+`Code:`
 ```javascript
 // sunday(0), monday(1), tuesday(2)... and so on.
-    var wdays = 0; //weekdays are zero initially
-    weekday: //label
-      for(var day = 1; day <= 31; day++) //condition for 31 days
-      {
-        checkDay = day % 7;
-        if (checkDay == 0) //checking for Sunday
-          continue weekday; //continue to the top of the loop
-        else
-          wdays++; // increment weekdays by 1
-      }
-      document.write(wdays + " weekdays this month.");
+var wdays = 0; //weekdays are zero initially
+weekday: //label
+    for (var day = 1; day <= 31; day++) //condition for 31 days
+{
+    checkDay = day % 7;
+    if (checkDay == 0) //checking for Sunday
+        continue weekday; //continue to the top of the loop
+    else
+        wdays++; // increment weekdays by 1
+}
+console.log(wdays + " weekdays this month.");
+```
+
+`Output:`
+```
+27 weekdays this month.
 ```
